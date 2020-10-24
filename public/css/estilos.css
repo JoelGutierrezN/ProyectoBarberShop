@@ -58,3 +58,6 @@ html{
 .f-negro{
     background-color: rgb(0, 0, 0);
 }
+.f-negro-claro{
+    background-color: rgba(0, 0, 0, 0.900);
+}

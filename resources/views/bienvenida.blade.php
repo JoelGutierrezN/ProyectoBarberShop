@@ -1,7 +1,7 @@
 @include('includes.header')
 
 <!--Cuerpo de la pagina-->
-<div class="card text-white f-negro mb-3">
+<div class="card text-white f-negro-claro">
 
     <!--Header-->
     <header>
@@ -53,11 +53,7 @@
                     <p class="Subtitulo">Lo mejor del pais</p>
                 </div>
             </div>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate maiores vel perferendis voluptates magnam provident. At illo expedita accusamus quam placeat blanditiis cumque odio atque praesentium, quibusdam delectus beatae hic!</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate maiores vel perferendis voluptates magnam provident. At illo expedita accusamus quam placeat blanditiis cumque odio atque praesentium, quibusdam delectus beatae hic!</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate maiores vel perferendis voluptates magnam provident. At illo expedita accusamus quam placeat blanditiis cumque odio atque praesentium, quibusdam delectus beatae hic!</p>
         </main>
     </div>
 </div>
-
 @include('includes.footer')
