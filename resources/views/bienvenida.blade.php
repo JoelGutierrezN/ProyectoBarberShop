@@ -46,12 +46,9 @@
 
     <!--Contenido-->
     <div class="container">
-        <main role="main" class="flex-Shrink-0">
-            <div class="container contenedor-titulos">
-                <p class="Titulo">Studio F BarberShop</p>
-                <div class="contenedor-subtitulo container">
-                    <p class="Subtitulo">Lo mejor del pais</p>
-                </div>
+        <main role="main" class="contenedor contenedor-titulos">
+            <div class="contenedor-vertical">
+                <a href="#" class="link boton-agendar">Agenda Tu Cita Ahora</a>
             </div>
         </main>
     </div>

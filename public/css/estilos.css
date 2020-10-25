@@ -1,12 +1,24 @@
-/*Contenedores*/
-.contenedor-titulos, .contenedor-titulos p{
-    max-width: 500px;
-    line-height: 50px;
-    margin-bottom: 0;
-    margin-top: 0;
+/* Contenedores */
+.contenedor{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.contenedor-vertical{
+    display: flex;
+    flex-direction: vertical;
+    justify-content: center;
+}
+.contenedor-titulos{
+    display: flex;
+    justify-content: space-evenly;
 }
 .contenedor-subtitulo{
     max-width: 350px; 
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
 }
 /* Fuentes */
 
@@ -33,7 +45,6 @@ html{
     font-weight: 700;
     font-size: 35px;
     background-color: rgba(133, 45, 4, 0.514);
-    border-radius: 30px;
     text-align: center;
 }
 .Subtitulo{
@@ -43,7 +54,7 @@ html{
     text-align: center;
 }
 
-/*Colores de Texto*/
+/* Colores de Texto */
 .link-blanco a{
     color:white;
     text-decoration: none;
@@ -54,10 +65,40 @@ html{
     font-weight: 600;
 }
 
-/*Fondos*/
+/* Fondos */
 .f-negro{
     background-color: rgb(0, 0, 0);
 }
 .f-negro-claro{
     background-color: rgba(0, 0, 0, 0.900);
+}
+
+/* Botones */
+.boton-agendar{
+    background-color: rgb(1, 91, 94);
+    width: 100%;
+    display: block;
+    border: white solid 0.5px;
+    margin: 10px;
+    padding: 7.5px;
+}
+.boton-agendar:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.63);
+    border: black solid 0.5px;
+}
+
+/* Otros */
+.link{
+    text-decoration: none;
+    color:white;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 500;
+    font-size: 35px;
+    text-align: center;
+    align-content: center;
+}
+.link:hover{
+    text-decoration: none;
+    font-weight: 600;
 }

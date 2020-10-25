@@ -1,7 +1,9 @@
 <!--Footer-->
 <footer class="footer mt-auto py-3 navbar-dark f-negro">
-            <div class="container">
-                <span class="text-muted">Place sticky footer content here.</span>
+            <div class="container footer">
+                <span class="text-muted">Direccion de Carrera Tecnologias de la Informacion y comunicacion.</span>
+                <span class="text-muted">Equipo 5</span>   
+                <span class="text-muted">Todos los Derechos Reservados 2020&copy;.</span>
             </div>
         </footer>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

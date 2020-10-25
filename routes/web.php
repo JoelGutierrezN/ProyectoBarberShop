@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('bienvenida');
 });
+Route::get('/agendar-cita', function () {
+    return view('citas');
+});
