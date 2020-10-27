@@ -1,4 +1,3 @@
-@include('includes.header');
+@extends('layouts.master')
 
-
-@include('includes.footer');
+@section('titulo', 'Citas')

@@ -1,13 +1,8 @@
-@include('includes.header')
+@extends('layouts.master')
 
-<!--Cuerpo de la pagina-->
-<div class="card text-white f-negro-claro">
+@section('titulo', 'Inicio')
 
-    <!--Header-->
-    <header>
-        @include('includes.navegacion')
-    </header>
-
+@section('contenido')
     <!--Carrusel-->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -44,7 +39,7 @@
         </a>
     </div>
 
-    <!--Contenido-->
+    <!--Boton de Agendar cita-->
     <div class="container">
         <main role="main" class="contenedor contenedor-titulos">
             <div class="contenedor-vertical">
@@ -52,5 +47,4 @@
             </div>
         </main>
     </div>
-</div>
-@include('includes.footer')
+@stop
