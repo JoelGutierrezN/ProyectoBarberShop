@@ -1,5 +1,6 @@
 @extends('layouts.master')
 
+<<<<<<< HEAD
 
 @section('titulo', 'Contacto')
 <div id="container">
@@ -43,3 +44,10 @@
     </div>
   </form>
 </div>
+=======
+@section('titulo', 'Contacto')
+
+@section('contenido')
+
+@stop
+>>>>>>> 2300f3ef2b95b6bed4a71347202f8b688397c379
