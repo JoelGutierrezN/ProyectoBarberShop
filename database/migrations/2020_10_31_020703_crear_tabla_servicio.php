@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CrearTablaCliente extends Migration
+class CrearTablaServicio extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class CrearTablaCliente extends Migration
      */
     public function up()
     {
-        Schema::table('cliente', function (Blueprint $table) {
-            //
+        Schema::create('servicio', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('nombre_servicio', 255);
+            $table->string('descripcion', 2000);
+            $table->float('costo');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +29,6 @@ class CrearTablaCliente extends Migration
      */
     public function down()
     {
-        Schema::table('cliente', function (Blueprint $table) {
-            //
-        });
+        Schema::drop('servicio');
     }
 }

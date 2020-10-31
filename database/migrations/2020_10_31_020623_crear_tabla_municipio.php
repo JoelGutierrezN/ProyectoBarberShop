@@ -13,8 +13,13 @@ class CrearTablaMunicipio extends Migration
      */
     public function up()
     {
-        Schema::table('municipio', function (Blueprint $table) {
-            //
+        Schema::create('municipio', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('clave', 255);
+            $table->string('nombre', 255);
+            $table->string('activo', 1);
+            $table->unsignedBigInteger('estado_id')->constrained('estado');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +30,6 @@ class CrearTablaMunicipio extends Migration
      */
     public function down()
     {
-        Schema::table('municipio', function (Blueprint $table) {
-            //
-        });
+        Schema::drop('municipio');
     }
 }
