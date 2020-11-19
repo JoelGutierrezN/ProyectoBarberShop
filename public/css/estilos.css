@@ -33,10 +33,18 @@ html{
     font-weight: 700;
     font-size: 35px;
     color:white;
-    margin-right:60%;
+    margin-right:50%;
     margin-left: 5%;
 }
 .logo:hover{
+    color:white;
+}
+
+.cabecera{
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    font-size: 35px;
+    text-align: center;
     color:white;
 }
 
@@ -86,6 +94,34 @@ html{
     color: rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0.63);
     border: black solid 0.5px;
+}
+/* Formularios */
+.back_formulario{
+    background-color: rgba(0, 0, 0, 0.637);
+    margin: 2.5%;
+    padding: 20px;
+    border-radius: 5px;
+    width: 40%;
+}
+.formulario{
+    color:white;
+}
+.servicios_check{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.servicio_check{
+    display: flex;
+    padding: 1px;
+    margin: 2px;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+.servicios_list{
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Otros */

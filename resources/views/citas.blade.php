@@ -1,26 +1,80 @@
 @extends('layouts.master')
-
-@section('titulo', 'Citas')
-<!DOCTYPE html>
-<div class="main">
-  <!--MAIN-container-->
-  <div class="container">
-    <h2>Citas Barber Shop Estudio F</h2>
-    <form action="mail.php" enctype="multipart/form-data" method="post" name="formulario_html5" autocomplete="off">
-      <label for="nombre">Nombre</label></br>
-      <input type="text" name="nombre" id="nombre" class="cajas"></br>
-    
-      <label for="email">Email</label></br>
-      <input type="email" name="email" id="email" class="cajas"></br>
-
-<label for="telefono">Teléfono</label></br>
-      <input type="number" name="telefono" id="telefono" class="cajas"></br>
-      
-      <label for="llegada">Fecha de cita</label></br>
-      <input type="datetime-local" id="llegada" name="fecha-hora-llegada" class="cajas">
-      </br>
-   
-      
-      <input type="submit" value="Enviar" name="submit" class="btn">
-
-</form>
+@section('titulo', 'Contacto')
+@section('contenido')
+<div class="container">
+  <div class="contenedor row align-items-center">
+    <div class="contenedor col">
+      <p class="cabecera"> En esta pagina puedes observar el historial de citas que has realizado con nosotros</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="contenedor col">
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+@stop

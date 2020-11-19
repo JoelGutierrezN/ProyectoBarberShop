@@ -10,13 +10,16 @@
                 <a class="nav-link" href="/">Inicio</a>
             </li>
             <li class="nav-item active">
+                <a class="nav-link" href="/servicios">Servicios</a>
+            </li>
+            <li class="nav-item active">
                 <a class="nav-link" href="/citas">Citas</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/contacto">Contacto</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Mi Cuenta</a>
+                <a class="nav-link" href="/">Mi Cuenta</a>
             </li>
         </ul>
     </div>
