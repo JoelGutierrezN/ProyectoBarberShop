@@ -13,7 +13,7 @@ class CrearTablaCliente extends Migration
      */
     public function up()
     {
-        Schema::create('cliente', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre', 255);
             $table->string('apellido_paterno', 255);

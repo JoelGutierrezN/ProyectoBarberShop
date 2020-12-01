@@ -16,7 +16,7 @@
     <div class="container">
         <main role="main" class="contenedor contenedor-titulos">
             <div class="contenedor-vertical">
-                <a href="#" class="link boton-agendar">Agenda Tu Cita Ahora</a>
+                <a href="/agendar_cita" class="link boton-agendar">Agenda Tu Cita Ahora</a>
             </div>
         </main>
     </div>
