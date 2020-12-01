@@ -14,11 +14,12 @@ class CrearTablaMunicipio extends Migration
     public function up()
     {
         Schema::create('municipio', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('clave', 255);
             $table->string('nombre', 255);
             $table->string('activo', 1);
-            $table->unsignedBigInteger('estado_id')->constrained('estado');
+            $table->unsignedBigInteger('estado_id');
+            $table->foreign('estado_id')->references('id')->on('estado');
             $table->timestamps();
         });
     }

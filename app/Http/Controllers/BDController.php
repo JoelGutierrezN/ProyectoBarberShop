@@ -15,4 +15,10 @@ class BDController extends Controller
             'citas' => $citas
         ]);
     }
+
+    public function login(Request $request){
+
+        $correo = $request->input('correo');
+        return view;
+    }
 }

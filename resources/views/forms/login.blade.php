@@ -3,7 +3,7 @@
 @section('contenido')
 <div class="contenedor">
   <div class="back_formulario">
-    <form class="formulario">
+    <form action="{{ action('BDController@login') }}" class="formulario" method="post">
         <div class="form-group">
             <label for="email">Correo Electronico</label>
             <input type="email" class="form-control" id="email" aria-describedby="emailHelp">

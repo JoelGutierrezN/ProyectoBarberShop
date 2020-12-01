@@ -3,6 +3,9 @@
 @section('titulo', 'Inicio')
 
 @section('contenido')
+    @if(session('status'))
+        {{ session('status') }}
+    @endif
     <!--Carrusel-->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">

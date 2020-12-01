@@ -14,14 +14,16 @@ class CrearTablaDireccion extends Migration
     public function up()
     {
         Schema::create('direccion', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('calle', 255);
             $table->string('num_ext', 50);
             $table->string('num_int', 50);
             $table->string('colonia', 255);
             $table->string('codigo_postal', 50);
             $table->unsignedBigInteger('estado_id');
-            $table->unsignedBigInteger('municipio_id')->constrained('municipio');
+            $table->unsignedBigInteger('municipio_id');
+            $table->foreign('estado_id')->references('id')->on('estado');
+            $table->foreign('municipio_id')->references('id')->on('municipio');
             $table->timestamps();
         });
     }

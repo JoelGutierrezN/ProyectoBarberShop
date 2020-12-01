@@ -14,14 +14,15 @@ class CrearTablaCliente extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('nombre', 255);
             $table->string('apellido_paterno', 255);
             $table->string('apellido_materno', 255);
             $table->string('edad', 255);
-            $table->string('nombre_usuario', 255);
-            $table->string('contrasena', 255);
-            $table->unsignedBigInteger('direccion_id')->constrained('direccion');
+            $table->string('email', 255);
+            $table->string('password', 255);
+            $table->unsignedBigInteger('direccion_id')->nullable();;
+            $table->foreign('direccion_id')->references('id')->on('direccion');
             $table->timestamps();
 
         });
@@ -34,6 +35,6 @@ class CrearTablaCliente extends Migration
      */
     public function down()
     {
-        Schema::drop('cliente');
+        Schema::drop('users');
     }
 }

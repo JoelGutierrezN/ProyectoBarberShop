@@ -14,10 +14,11 @@ class CrearTablaCita extends Migration
     public function up()
     {
         Schema::create('cita', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('fecha', 255);
             $table->string('hora', 255);
-            $table->unsignedBigInteger('servicio_id')->constrained('servicio');
+            $table->unsignedBigInteger('servicio_id');
+            $table->foreign('servicio_id')->references('id')->on('servicio');
             $table->timestamps();
 
         });
