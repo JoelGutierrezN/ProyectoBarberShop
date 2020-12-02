@@ -23,7 +23,7 @@
                         <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
                     </svg>
                     <div class="dropdown-menu f-negro text-white" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Cuenta</a>
+                        <a class="dropdown-item" href="/perfil">Cuenta</a>
                         <a class="dropdown-item" href="/citas">Citas</a>
                         <a class="dropdown-item" href="/direcciones">Direcciones</a>
                         <a class="dropdown-item" href="{{ route('logout') }}"

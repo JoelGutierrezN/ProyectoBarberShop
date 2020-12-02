@@ -6,7 +6,7 @@
         @include('includes.head')
     @show
 </head>
-<body class="f-negro-claro">
+<body class="f-negro-claro bg-alter">
 
     <!-- Barra de navegacion del archivo navegacion.blade.php -->
     @section('navegacion')

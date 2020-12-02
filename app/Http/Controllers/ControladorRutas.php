@@ -23,6 +23,7 @@ class ControladorRutas extends Controller
     }
 
     public function agendar_cita () { return view( 'forms.agendar_cita' ); }
+
     public function direcciones () {
         
         $direcciones = DB::table('direccion')->get();
@@ -30,8 +31,17 @@ class ControladorRutas extends Controller
              'direcciones' => $direcciones
          ] ); 
     }
+
     public function agregar_direccion () {
         $id = Auth::id();
          return view( 'forms.agregar_direccion'); 
+    }
+
+    public function perfil () {
+        $id = Auth::id();
+        $datos = DB::table('users')->where('id', '=', $id)->first();
+         return view( 'perfil',[
+             'datos' => $datos
+         ]); 
     }
 }

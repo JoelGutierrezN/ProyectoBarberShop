@@ -7,7 +7,8 @@ Route::get('/login', 'ControladorRutas@login');
 Route::get('/servicios', 'ControladorRutas@servicios');  
 Route::get('/agendar_cita', 'ControladorRutas@agendar_cita')->middleware('auth');
 Route::get('/agregar_direccion', 'ControladorRutas@agregar_direccion')->middleware('auth');
-Route::get('/direcciones', 'ControladorRutas@direcciones')->middleware('auth');    
+Route::get('/direcciones', 'ControladorRutas@direcciones')->middleware('auth');  
+Route::get('/perfil', 'ControladorRutas@perfil')->middleware('auth');      
 
 Auth::routes();
 

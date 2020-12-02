@@ -105,7 +105,21 @@ html{
 .f-negro-claro{
     background-color: rgba(0, 0, 0, 0.900);
 }
+.bg-studiof{
+    background-image: url('https://previews.123rf.com/images/dmytroduda/dmytroduda1704/dmytroduda170400518/77003155-herramientas-de-peluquer%C3%ADa-sobre-fondo-de-madera-vista-superior-en-la-mesa-de-madera-con-tijeras-y-com.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+.bg-alter{
+    background-image: url('https://www.comuniqar.com/wp-content/uploads/2016/09/fondo-oscuro.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /* Botones */
 .boton-agendar{
     background-color: rgb(1, 91, 94);

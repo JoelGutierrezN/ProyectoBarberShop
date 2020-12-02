@@ -1,30 +1,33 @@
 @extends('layouts.master')
 @section('titulo', 'Contacto')
 @section('contenido')
-<div class="container">
-  <div class="contenedor row align-items-center">
-    <div class="contenedor col">
-      <p class="Subtitulo text-white"> En esta pagina puedes observar el historial de citas que has realizado con nosotros</p>
-    </div>
-    <div class="w-100"></div>
-    <div class="contenedor col">
-      <table class="table table-dark">
-        <thead>
-          <tr>
-            <th scope="col">fecha</th>
-            <th scope="col">Hora</th>
-          </tr>
-        </thead>
-        <tbody>
-          @foreach($citas as $cita)
+  <div class="container bg-alter">
+    <div class="container row align-items-center">
+      <div class="container col">
+        <p class="Subtitulo text-white"> En esta pagina puedes observar el historial de citas que has realizado con nosotros</p>
+      </div>
+      <div class="w-100"></div>
+      <div class="contenedor col">
+        <table class="table table-dark">
+          <thead>
             <tr>
-              <td>{{$cita->fecha}}</td>
-              <td>{{$cita->hora}}</td>
+              <th scope="col">fecha</th>
+              <th scope="col">Hora</th>
             </tr>
-          @endforeach
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            @foreach($citas as $cita)
+              <tr>
+                <td>{{$cita->fecha}}</td>
+                <td>{{$cita->hora}}</td>
+              </tr>
+            @endforeach
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="contenedor">
+      <a href="/agendar_cita" class="btn btn-success">Agendar Cita</a>
     </div>
   </div>
-</div>
 @stop
