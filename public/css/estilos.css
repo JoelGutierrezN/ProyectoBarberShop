@@ -1,3 +1,14 @@
+/* Menu */
+#desple{
+    position: absolute;
+}
+.navbar #desple{
+    display: block;
+    padding-inline-start: 0px;
+}
+#item:hover > #desple{
+    display: block;
+}
 /* Contenedores */
 .contenedor{
     display: flex;
@@ -84,7 +95,7 @@ html{
 .link-blanco a:hover{
     color:white;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 /* Fondos */

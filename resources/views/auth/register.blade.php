@@ -4,10 +4,10 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card bg-dark text-white">
-                <div class="card-header text-center Subtitulo">{{ __('Registrate Ahora en Studio F y agenda tu Primera Cita') }}</div>
+            <div class="card">
+                <div class="card-header text-center bg-dark text-white Subtitulo">{{ __('Registrate Ahora en Studio F y agenda tu Primera Cita') }}</div>
 
-                <div class="card-body">
+                <div class="card-body bg-dark text-white">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -110,7 +110,7 @@
                                 </button>
                             </div>
                             <div class="col-md-6 offset-md-1">
-                                <a href="/login" class="btn btn-primary">
+                                <a href="/login" class="">
                                     {{ __('¿Ya tienes una cuenta? Inicia Sesion') }}
                                 </a>
                             </div>
