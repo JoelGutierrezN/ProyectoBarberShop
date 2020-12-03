@@ -24,9 +24,22 @@ class ControladorRutas extends Controller
 
     public function agendar_cita () { return view( 'forms.agendar_cita' ); }
 
-    public function direcciones () {
+    public function direcciones ($id) {
         
-        $direcciones = DB::table('direccion')->get();
+        $direcciones = DB::table('users')
+        ->join('direccion', 'direccion.id', '=', 'users.direccion_id')
+        ->join('estado', 'direccion.estado_id', '=', 'estado.id')
+        ->join('municipio', 'estado.id', '=', 'municipio.id')
+        ->select(
+         'direccion.calle',
+         'direccion.num_ext',
+         'direccion.num_int',
+         'direccion.colonia',
+         'direccion.codigo_postal',
+         'municipio.nombre',
+         'estado.nombre_estado')
+        ->where('users.id', '=', $id)->get();
+
          return view( 'direcciones', [
              'direcciones' => $direcciones
          ] ); 
@@ -34,7 +47,10 @@ class ControladorRutas extends Controller
 
     public function agregar_direccion () {
         $id = Auth::id();
-         return view( 'forms.agregar_direccion'); 
+        $estados = DB::table('estado')->orderBy('nombre_estado','asc')->get();
+        return view( 'forms.agregar_direccion',[
+            'estados' => $estados
+        ]); 
     }
 
     public function perfil () {

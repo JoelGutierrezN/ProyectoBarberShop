@@ -56,6 +56,9 @@
             <select name="estado" id="estado">
 
               <option value="" selected disabled>-Seleccionar-</option>
+              @foreach($estados as $estado)
+                <option value="{{ $estado->id }}">{{ $estado->nombre_estado }}</option>
+              @endforeach
 
             </select>
 

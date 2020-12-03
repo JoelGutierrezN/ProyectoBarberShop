@@ -29,9 +29,9 @@
               <td>{{ $direccion->num_int }}</td>
               <td>{{ $direccion->colonia }}</td>
               <td>{{ $direccion->codigo_postal }}</td>
-              <td>{{ $direccion->estado_id }}</td>
-              <td>{{ $direccion->municipio_id }}</td>
-              <a href="" class="/agregar_direccion">Editar</a>
+              <td>{{ $direccion->nombre_estado }}</td>
+              <td>{{ $direccion->nombre }}</td>
+              <td><a href="/agregar_direccion" class="btn btn-warning">Editar</a></td>
             </tr>
           @endforeach
         </tbody>

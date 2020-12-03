@@ -24,8 +24,8 @@
                     </svg>
                     <div class="dropdown-menu f-negro text-white" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="/perfil">Cuenta</a>
-                        <a class="dropdown-item" href="/citas">Citas</a>
-                        <a class="dropdown-item" href="/direcciones">Direcciones</a>
+                        <a class="dropdown-item" href="{{ action('BDController@citas',['id' => Auth::id()])}}">Citas</a>
+                        <a class="dropdown-item" href="{{ action('ControladorRutas@direcciones',['id' => Auth::id()])}}">Direcciones</a>
                         <a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">

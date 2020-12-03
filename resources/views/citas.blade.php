@@ -13,6 +13,8 @@
             <tr>
               <th scope="col">fecha</th>
               <th scope="col">Hora</th>
+              <th scope="col">Servicio</th>
+              <th scope="col">Costo</th>
             </tr>
           </thead>
           <tbody>
@@ -20,6 +22,8 @@
               <tr>
                 <td>{{$cita->fecha}}</td>
                 <td>{{$cita->hora}}</td>
+                <td>{{$cita->nombre_servicio}}</td>
+                <td>${{$cita->costo}}</td>
               </tr>
             @endforeach
           </tbody>
