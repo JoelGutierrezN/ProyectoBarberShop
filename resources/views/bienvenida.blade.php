@@ -19,7 +19,7 @@
     <div class="container">
         <main role="main" class="contenedor contenedor-titulos">
             <div class="contenedor-vertical">
-                <a href="/agendar_cita" class="link boton-agendar">Agenda Tu Cita Ahora</a>
+                <a href="{{ action( 'ControladorRutas@agendar_cita', [ 'id' => Auth::id() ] ) }}" class="link boton-agendar">Agenda Tu Cita Ahora</a>
             </div>
         </main>
     </div>

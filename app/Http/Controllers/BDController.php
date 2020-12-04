@@ -29,4 +29,27 @@ class BDController extends Controller
             'municipios' => $municipios
         ]);
     }
+
+    public function actualizarperfil (Request $request){
+
+        $id = $request->input('id');
+        $user = DB::table('users')->where('id', '=', $id)
+            ->update(array(
+                'nombre' => $request->input('nombre'),
+                'apellido_paterno' => $request->input('apellido_paterno'),
+                'apellido_materno' => $request->input('apellido_materno'),
+                'edad' => $request->input('edad'),
+                'email' => $request->input('email'),
+                'password' => $request->input('password'),
+            ));
+
+        return redirect()->action('ControladorRutas@perfil');
+    }
+
+    public function insertar_cita (Request $request){
+
+        //insertar cita
+
+        return redirect()->action('ControladorRutas@citas');
+    }
 }

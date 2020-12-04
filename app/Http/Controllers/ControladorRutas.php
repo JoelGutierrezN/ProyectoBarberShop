@@ -22,7 +22,32 @@ class ControladorRutas extends Controller
         ] ); 
     }
 
-    public function agendar_cita () { return view( 'forms.agendar_cita' ); }
+    public function agendar_cita ($id) { 
+        $direcciones = DB::table('users')
+        ->join('direccion', 'direccion.id', '=', 'users.direccion_id')
+        ->join('estado', 'direccion.estado_id', '=', 'estado.id')
+        ->join('municipio', 'estado.id', '=', 'municipio.id')
+        ->select(
+         'direccion.calle',
+         'direccion.num_ext',
+         'direccion.num_int',
+         'direccion.colonia',
+         'direccion.codigo_postal',
+         'municipio.nombre',
+         'estado.nombre_estado')
+        ->where('users.id', '=', $id)->get();
+
+        $user = DB::table('users')->where('id', '=', $id)->first();
+        $tickets = DB::table('detalle_servicio')->orderBy('id', 'desc')->first();
+        $servicios = DB::table('servicio')->get();
+
+        return view( 'forms.agendar_cita',[
+            'direcciones' => $direcciones,
+            'user' => $user,
+            'tickets' => $tickets,
+            'servicios' => $servicios
+        ]); 
+    }
 
     public function direcciones ($id) {
         
