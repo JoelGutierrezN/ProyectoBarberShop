@@ -48,8 +48,21 @@ class BDController extends Controller
 
     public function insertar_cita (Request $request){
 
-        //insertar cita
+        $cita = DB::table('cita')->insert(array(
+            'fecha' => $request->input('fecha'),
+            'hora' => $request->input('hora'),
+            'servicio_id' => $request->input('direccion_id')
+        ));
 
-        return redirect()->action('ControladorRutas@citas');
+        $detalle_servicio = DB::table('detalle_servicio')->insert(array(
+            'num_factura' => $request->input('num_factura'),
+            'subtotal' => '0',
+            'tipo_servicio' => $request->input('tipo_servicio'),
+            'cliente_id' => $request->input('user_id'),
+            'cita_id' => $request->input('num_factura'),
+            'direccion_id' => $request->input('direccion_id')
+        ));
+
+        return redirect()->action('BDController@citas', ['id' => Auth::id()]);
     }
 }
