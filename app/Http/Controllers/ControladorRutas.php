@@ -68,7 +68,7 @@ class ControladorRutas extends Controller
     public function direcciones ($id) {
         
         $direcciones = DB::table('users')
-        ->join('direccion', 'direccion.id', '=', 'users.direccion_id')
+        ->join('direccion', 'users.id', '=', 'direccion.usuario_id')
         ->join('estado', 'direccion.estado_id', '=', 'estado.id')
         ->join('municipio', 'estado.id', '=', 'municipio.id')
         ->select(

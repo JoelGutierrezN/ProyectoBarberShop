@@ -4,7 +4,7 @@
   <div class="container bg-alter">
     <div class="container row align-items-center">
       <div class="container col">
-        <p class="Subtitulo text-white"> En esta pagina puedes observar el historial de citas que has realizado con nosotros</p>
+        <p class="Subtitulo text-white"> En este apartado puedes observar el historial de citas que has realizado con nosotros</p>
       </div>
       <div class="w-100"></div>
       <div class="contenedor col">

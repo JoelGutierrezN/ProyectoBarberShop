@@ -21,8 +21,6 @@ class CrearTablaCliente extends Migration
             $table->string('edad', 255);
             $table->string('email', 255);
             $table->string('password', 255);
-            $table->unsignedBigInteger('direccion_id')->nullable();;
-            $table->foreign('direccion_id')->references('id')->on('direccion');
             $table->timestamps();
 
         });
